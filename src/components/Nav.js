@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '../App.css';
 
 const Nav = () =>{
     return(
         <nav className='Nav-bar'>
-            <ul style={{display:"flex-inline",listStyleType:"none", margin:"10px"}}>
-                <li>Home</li>
-                <li>Contact</li>
-                <li>About</li>
+            <ul>
+                <Link to="/" className='nav-item' >Home</Link>
+                <Link to="/aboutMe" className='nav-item'>About Me</Link>
             </ul>
         </nav>
     );

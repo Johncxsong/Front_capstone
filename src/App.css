@@ -5,6 +5,12 @@ main{
     background-color: bisque;
 }
 
+.nav-item{
+    margin: 10px;
+    pad: 10px;
+    text-decoration: none;
+}
+
 
 
 
