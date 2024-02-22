@@ -10,6 +10,7 @@ import Article from './components/Article';
 import Footer from './components/Footer';
 
 
+
 const HomePage = () =>{
 
     return(
