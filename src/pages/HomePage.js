@@ -9,24 +9,23 @@ import Section from './components/Section';
 import Article from './components/Article';
 import Footer from './components/Footer';
 
-// styling
-import './App.css';
+
+const HomePage = () =>{
+
+    return(
+        <div className='homePage'>
+        <Header />
+        <Nav />
+        <main>
+          <Aside />
+          <Section>
+            <Article />
+          </Section>
+        </main>
+        <Footer />
+      </div>
+    );
+};
 
 
-function App() {
-  return(
-  <div className='App'>
-    <Header />
-    <Nav />
-    <main>
-      <Aside />
-      <Section>
-        <Article />
-      </Section>
-    </main>
-    <Footer />
-  </div>
-  );
-}
-
-export default App;
+export default HomePage;
