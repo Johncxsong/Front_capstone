@@ -9,6 +9,7 @@ import Aside from './components/Aside';
 
 import AboutMe from './pages/AboutMe';
 import HomePage from './pages/HomePage';
+import Booking from './pages/Booking';
 // styling
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element = {<HomePage />} />
         <Route path="/aboutMe" element = {<AboutMe />} />
+        <Route path="/booking" element ={<Booking />} />
       </Routes>
     </div>
 
