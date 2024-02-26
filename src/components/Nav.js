@@ -9,7 +9,6 @@ const Nav = () =>{
                 <Link to="/" className='nav-item' >Home</Link>
                 <Link to="/booking" className='nav-item'>Booking</Link>
                 <Link to="/aboutMe" className='nav-item'>About Me</Link>
-                
             </ul>
         </nav>
     );

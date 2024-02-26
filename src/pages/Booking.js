@@ -1,8 +1,10 @@
 import React from 'react';
+import Form from '../components/Form';
 
-const Booking = ()=>{
+const Booking = ({children})=>{
     return(
-        <h1>welcome to booking page</h1>
+
+        <Form />
     );
 };
 
