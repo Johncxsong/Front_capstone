@@ -1,6 +1,7 @@
 // dependencies
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
+import { ChakraProvider } from "@chakra-ui/react";
 
 // content module import
 import Header from './components/Header';
@@ -17,15 +18,16 @@ import './App.css';
 function App() {
   return(
 
-    <div>
-      <Nav />
-      <Routes>
-        <Route path="/" element = {<HomePage />} />
-        <Route path="/aboutMe" element = {<AboutMe />} />
-        <Route path="/booking" element ={<Booking />} />
-      </Routes>
-    </div>
-
+    <ChakraProvider>
+      <div>
+        <Nav />
+        <Routes>
+          <Route path="/" element = {<HomePage />} />
+          <Route path="/aboutMe" element = {<AboutMe />} />
+          <Route path="/booking" element ={<Booking />} />
+        </Routes>
+      </div>
+    </ChakraProvider>
 
   );
 }
