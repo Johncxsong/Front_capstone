@@ -1,12 +1,13 @@
 // dependencies
 import React from 'react';
+import { Text } from '@chakra-ui/react';
 
 
 
 const AboutMe = () =>{
 
     return(
-        <h1>About Me</h1>
+        <Text>Welcome to Little Lemon Page! Please call us</Text>
     );
 };
 

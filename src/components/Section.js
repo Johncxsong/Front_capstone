@@ -1,13 +1,17 @@
 import React from 'react';
-
+import { VStack } from "@chakra-ui/react";
 
 const Section = ({children}) =>{
 
     return(
-        <section>
-            <p>this is section</p>
-            {children}
-        </section>
+        <VStack 
+            backgroundColor="white"
+        >
+            <VStack maxWidth="1280px" minHeight="100vh">
+                {children}
+            </VStack>
+
+        </VStack>
     );
 
 };
