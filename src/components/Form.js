@@ -21,6 +21,7 @@ import {
 import '../App.css';
 import useSubmit from '../hooks/useSubmit';
 
+import { useAlertContext } from '../context/alertContext';
 
 
 const Form = () =>{
@@ -28,6 +29,7 @@ const Form = () =>{
     // form attributes
     const{isLoading, response, submit} = useSubmit();
     const[date, SetDate] = useState();
+    const {onOpen} = useAlertContext();
 
     const formik = useFormik({
         initialValues:{
@@ -38,7 +40,8 @@ const Form = () =>{
             special:"",
         },
         onSubmit: (value)=>{
-            submit('https://john.com/contactme', value);
+            alert(JSON.stringify(value, null, 2))
+            submit('/home', value);
         },
         validationSchema: Yup.object({
             name: Yup.string().required("Required"),
@@ -51,6 +54,7 @@ const Form = () =>{
     // reset
     useEffect(()=>{
         if(response){
+            onOpen(response.type, response.message);
             if(response.type ==='success'){
                 formik.resetForm();
             }
@@ -71,7 +75,6 @@ const Form = () =>{
                     />
                     <FormErrorMessage>{formik.errors.name}</FormErrorMessage>
                 </FormControl>
-
                 <FormControl isInvalid={!!formik.errors.email && formik.touched.email}>
                     <FormLabel htmlFor="email">Email Address</FormLabel>
                     <Input
@@ -101,7 +104,6 @@ const Form = () =>{
                             showTimeSelect
                             dateFormat="Pp"
                         />
-                    
                 </FormControl>
 
                 <Button type="submit" colorScheme="blue" width="full" isLoading={isLoading}>

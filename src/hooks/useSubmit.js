@@ -26,7 +26,7 @@ const useSubmit = () =>{
             })
         }finally{
             setLoading(false);
-            console.log(response.message);
+            alert(response.message);
         }
     };
 
