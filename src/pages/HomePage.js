@@ -1,5 +1,6 @@
 // dependencies
 import React from 'react';
+import {Flex} from '@chakra-ui/react'
 
 // content module import
 import Header from '../components/Header';
@@ -30,7 +31,7 @@ const projects = [
 const HomePage = () =>{
 
     return(
-        <div className='homePage'>
+      <Flex direction="column" flex='1'>
         <Header />
         <main>
           {/* <Aside /> */}
@@ -47,7 +48,7 @@ const HomePage = () =>{
           </Section>
         </main>
         <Footer />
-      </div>
+      </Flex>
     );
 };
 

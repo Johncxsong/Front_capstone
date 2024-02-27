@@ -10,7 +10,7 @@ export const AlertProvider = ({children})=>{
     });
 
     return(
-        <AlertContext.Provider 
+        <AlertContext.Provider
             value={{
                 ...state,
                 onOpen: (type, message) => setState({isOpen:true, type, message}),

@@ -6,10 +6,11 @@ const Header = () =>{
     return(
         <Box>
             <Center 
-                bg='#0C3B2E' h='200px' color= '#F2E6CE'
+                bg='url(https://littlelemonrestaurantankitamwebsiteproject.netlify.app/static/media/Logo.370f832fad423c516d56.png) center/cover no-repeat'
+                h='200px' color= '#F2E6CE'
                 fontFamily="Arial" fontSize='xxx-large'
                 borderRadius="20px">
-                    <b>Little Lemon</b>
+                    
             </Center>
         </Box>
     );

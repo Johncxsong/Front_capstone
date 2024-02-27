@@ -6,22 +6,13 @@ import {Box, HStack, Text} from "@chakra-ui/react";
 const Nav = () =>{
 
     return(
-    <Box 
-            position="fixed"
-            top={0}
-            left={0}
-            right={0}
-            translateY={0}
-            transitionProperty="transform"
-            transitionDuration=".3s"
-            transitionTimingFunction="ease-in-out"
-            backgroundColor="YELLOW"
-    >
+    <Box backgroundColor="YELLOW" color="Black">
+
             <nav className='Nav-bar'>
                 <ul>
-                    <Link to="/" className='nav-item' >Home</Link>
-                    <Link to="/booking" className='nav-item'>Booking</Link>
-                    <Link to="/aboutMe" className='nav-item'>About Me</Link>
+                    <Link to="/" className='nav-item' ><b>Home</b></Link>
+                    <Link to="/booking" className='nav-item'><b>Booking</b></Link>
+                    <Link to="/aboutMe" className='nav-item'><b>About Me</b></Link>
                 </ul>
             </nav>
     </Box>
